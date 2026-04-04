@@ -240,17 +240,28 @@ function initializeApp() {
 
 function addStepControls() {
   document.querySelectorAll('.tab-panel').forEach((panel) => {
-    if (panel.querySelector('.step-actions')) return;
+    const actions = panel.querySelector('.step-actions');
 
-    const actions = document.createElement('div');
-    actions.className = 'step-actions';
-    actions.innerHTML = `
+    if (actions) {
+      if (!actions.querySelector('.step-home')) {
+        const homeButton = document.createElement('button');
+        homeButton.type = 'button';
+        homeButton.className = 'step-button step-home';
+        homeButton.textContent = 'Início';
+        actions.insertBefore(homeButton, actions.firstChild);
+      }
+      return;
+    }
+
+    const newActions = document.createElement('div');
+    newActions.className = 'step-actions';
+    newActions.innerHTML = `
       <button type="button" class="step-button step-home">Início</button>
       <button type="button" class="step-button step-prev">Voltar</button>
       <button type="button" class="step-button step-next">Próximo</button>
     `;
 
-    panel.appendChild(actions);
+    panel.appendChild(newActions);
   });
 }
 
