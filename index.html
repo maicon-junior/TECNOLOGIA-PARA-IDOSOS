@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>App Inclusão Digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-topbar app-card">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">👴</div>
+        <div class="brand-text">
+          <strong id="app-title">Inclusão Digital</strong>
+          <span>App para idosos</span>
+        </div>
+      </div>
+
+      <div class="accessibility-group">
+        <button id="btn-back" class="nav-button" aria-label="Voltar">🏠</button>
+        <button id="btn-font" class="nav-button" type="button" aria-label="Aumentar fonte">A+</button>
+      </div>
+    </header>
+
+    <p class="app-status">Escolha uma função e siga o passo a passo com calma.</p>
+
+    <main class="app-card app-screen-holder">
+      <section class="screen active" data-screen="home">
+        <div class="screen-illustration home-illustration">
+          <img src="assets/images/INICIO/inicio.jpg" alt="Ilustração de boas-vindas" aria-hidden="true" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+
+        <div class="intro-card">
+          <h1>Escolha uma função</h1>
+          <p>Passos fáceis para usar WhatsApp, banco, segurança e internet.</p>
+        </div>
+
+        <div class="button-grid">
+          <button class="app-button" data-target="whatsapp">
+            <span class="button-icon">💬</span>
+            <strong>WhatsApp</strong>
+            <span>Enviar mensagem segura</span>
+          </button>
+
+          <button class="app-button" data-target="ligacoes">
+            <span class="button-icon">📞</span>
+            <strong>Ligações</strong>
+            <span>Fazer chamadas e evitar golpes</span>
+          </button>
+
+          <button class="app-button" data-target="seguranca">
+            <span class="button-icon">🔒</span>
+            <strong>Segurança</strong>
+            <span>Evitar golpes e proteger dados</span>
+          </button>
+
+          <button class="app-button" data-target="internet">
+            <span class="button-icon">🌐</span>
+            <strong>Internet</strong>
+            <span>Navegar com mais confiança</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="whatsapp">
+        <div class="screen-illustration">
+          <img src="assets/images/WHATSAPP/whatsapp-icone.jpg" alt="Ícone do WhatsApp" aria-hidden="true" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+
+        <div class="screen-header">
+          <div>
+            <h2>WhatsApp Fácil</h2>
+            <span>Enviar mensagem segura</span>
+          </div>
+          <div class="screen-badge">1</div>
+        </div>
+
+        <div class="screen-tabs" role="tablist">
+          <button class="tab-button active" data-panel="whatsapp-open" type="button">Abrir</button>
+          <button class="tab-button" data-panel="whatsapp-write" type="button">Escrever</button>
+          <button class="tab-button" data-panel="whatsapp-send" type="button">Enviar</button>
+        </div>
+
+        <div class="tab-panel active" id="whatsapp-open">
+          <div class="content-block">
+            <h3>ABRIR O APLICATIVO</h3>
+            <ol>
+              <li>Abra o WhatsApp no celular.</li>
+              <li>Toque na conversa que deseja abrir.</li>
+            </ol>
+            <p class="help-note">Comece pelo botão de mensagem.</p>
+          </div>
+            <div class="mobile-screenshot">
+            <img src="assets/images/WHATSAPP/whatsapp-abrir1.jpg" alt="Screenshot de como abrir WhatsApp" loading="lazy" />
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/WHATSAPP/whatsapp-abrir2.jpg" alt="Screenshot de como abrir WhatsApp" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="whatsapp-write">
+          <div class="content-block">
+            <h3>ESCREVA SUA MENSAGEM</h3>
+            <ol>
+              <li>Toque na caixa de texto para digitar.</li>
+              <li>Escreva com calma o que quer dizer.</li>
+            </ol>
+            <p class="help-note">Use palavras simples e diretas.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/WHATSAPP/whatsapp-mensagem.jpg" alt="Screenshot de como escrever mensagem no WhatsApp" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="whatsapp-send">
+          <div class="content-block">
+            <h3>ENVIAR MENSAGEM</h3>
+            <ol>
+              <li>Confira o nome do contato.</li>
+              <li>Toque em enviar.</li>
+            </ol>
+            <p class="help-note">Se tiver dúvida, peça ajuda antes de enviar.</p>
+          </div>
+          <div class="mobile-screenshot larger-screenshot">
+            <img src="assets/images/WHATSAPP/whatsapp-enviar.jpg" alt="Screenshot de como enviar mensagem no WhatsApp" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="ligacoes">
+        <div class="screen-illustration">
+          <img src="assets/images/illustration-phone.svg" alt="Ilustração de ligações telefônicas" aria-hidden="true" loading="lazy" onerror="this.style.display='none'" />
+          <div class="illustration-fallback">📞</div>
+        </div>
+
+        <div class="screen-header">
+          <div>
+            <h2>Ligações Telefônicas</h2>
+            <span>Fazer chamadas com segurança</span>
+          </div>
+          <div class="screen-badge">2</div>
+        </div>
+
+        <div class="screen-tabs" role="tablist">
+          <button class="tab-button active" data-panel="ligacoes-fazer" type="button">Fazer</button>
+          <button class="tab-button" data-panel="ligacoes-receber" type="button">Receber</button>
+          <button class="tab-button" data-panel="ligacoes-evitar" type="button">Evitar</button>
+        </div>
+
+        <div class="tab-panel active" id="ligacoes-fazer">
+          <div class="content-block">
+            <h3>FAZER UMA CHAMADA</h3>
+            <ol>
+              <li>Abra o aplicativo de telefone no celular.</li>
+              <li>Toque no ícone de discar ou no teclado numérico.</li>
+              <li>Digite o número do contato e toque em ligar.</li>
+            </ol>
+            <p class="help-note">Fale devagar e com clareza quando atenderem.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/LIGACOES/ligacao-fazer.jpg" alt="Screenshot de como fazer uma chamada" loading="lazy" />
+          </div>
+          <div class="step-actions">
+            <button class="step-button step-prev" type="button">Voltar</button>
+            <button class="step-button step-next" type="button">Próximo</button>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="ligacoes-receber">
+          <div class="content-block">
+            <h3>RECEBER UMA CHAMADA</h3>
+            <ol>
+              <li>Quando o telefone tocar, deslize para atender.</li>
+              <li>Diga "alô" e pergunte quem está ligando.</li>
+              <li>Se não conhecer a voz, pergunte o motivo da ligação.</li>
+            </ol>
+            <p class="help-note">Se parecer estranho, pode desligar educadamente.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/LIGACOES/ligacao-receber.jpg" alt="Screenshot de como receber uma chamada" loading="lazy" />
+          </div>
+          <div class="step-actions">
+            <button class="step-button step-prev" type="button">Voltar</button>
+            <button class="step-button step-next" type="button">Próximo</button>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="ligacoes-evitar">
+          <div class="content-block">
+            <h3>EVITAR GOLPES POR TELEFONE</h3>
+            <ol>
+              <li>Nunca dê informações pessoais como CPF ou senha.</li>
+              <li>Não transfira dinheiro para desconhecidos.</li>
+              <li>Desligue imediatamente se pedirem dados ou dinheiro.</li>
+            </ol>
+            <p class="help-note">Golpes telefônicos são comuns; sempre desconfie.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/LIGACOES/ligacao-evitar.jpg" alt="Screenshot de como evitar golpes por telefone" loading="lazy" />
+          </div>
+          <div class="step-actions">
+            <button class="step-button step-prev" type="button">Voltar</button>
+            <button class="step-button step-next" type="button">Próximo</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="seguranca">
+        <div class="screen-illustration">
+          <img src="assets/images/illustration-security.svg" alt="Ilustração de segurança digital" aria-hidden="true" loading="lazy" onerror="this.style.display='none'" />
+          <div class="illustration-fallback">🔐</div>
+        </div>
+
+        <div class="screen-header">
+          <div>
+            <h2>SEGURANÇA DIGITAL</h2>
+            <span>Evitar golpes e proteger seus dados</span>
+          </div>
+          <div class="screen-badge">3</div>
+        </div>
+
+        <div class="screen-tabs" role="tablist">
+          <button class="tab-button active" data-panel="seguranca-check" type="button">Verificar</button>
+          <button class="tab-button" data-panel="seguranca-protect" type="button">Proteger</button>
+          <button class="tab-button" data-panel="seguranca-help" type="button">Ajuda</button>
+        </div>
+
+        <div class="tab-panel active" id="seguranca-check">
+          <div class="content-block">
+            <h3>OLHE COM ATENÇÃO</h3>
+            <ol>
+              <li>Não abra links de quem você não conhece.</li>
+              <li>Verifique o remetente antes de clicar.</li>
+            </ol>
+            <p class="help-note">Mensagens estranhas pedem cuidado.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/seguranca-check.jpg" alt="Screenshot de como verificar mensagens suspeitas" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="seguranca-protect">
+          <div class="content-block">
+            <h3>PROTEJA SEUS DADOS</h3>
+            <ol>
+              <li>Mantenha sua senha em segredo.</li>
+              <li>Não compartilhe código ou dados pessoais.</li>
+            </ol>
+            <p class="help-note">Guarde suas senhas em local seguro.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/seguranca-protect.jpg" alt="Screenshot de como proteger dados pessoais" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="seguranca-help">
+          <div class="content-block">
+            <h3>PEÇA AJUDA</h3>
+            <ol>
+              <li>Se estiver em dúvida, pergunte a alguém de confiança.</li>
+              <li>Não responda mensagens que parecem golpe.</li>
+            </ol>
+            <p class="help-note">Pedir ajuda evita erros.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/seguranca-help.jpg" alt="Screenshot de como pedir ajuda em caso de dúvida" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="internet">
+        <div class="screen-illustration">
+          <img src="assets/images/illustration-internet.svg" alt="Ilustração de navegação na internet" aria-hidden="true" loading="lazy" onerror="this.style.display='none'" />
+          <div class="illustration-fallback">🌐</div>
+        </div>
+
+        <div class="screen-header">
+          <div>
+            <h2>Internet Simples</h2>
+            <span>Navegar com mais confiança</span>
+          </div>
+          <div class="screen-badge">4</div>
+        </div>
+
+        <div class="screen-tabs" role="tablist">
+          <button class="tab-button active" data-panel="internet-open" type="button">Abrir</button>
+          <button class="tab-button" data-panel="internet-search" type="button">Buscar</button>
+          <button class="tab-button" data-panel="internet-close" type="button">Fechar</button>
+        </div>
+
+        <div class="tab-panel active" id="internet-open">
+          <div class="content-block">
+            <h3>ABRA O NAVEGADOR</h3>
+            <ol>
+              <li>Toque no ícone do navegador.</li>
+              <li>Use a barra de endereço para digitar o site.</li>
+            </ol>
+            <p class="help-note">Comece por sites conhecidos.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/internet-open.jpg" alt="Screenshot de como abrir navegador" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="internet-search">
+          <div class="content-block">
+            <h3>PESQUISE COM CUIDADO</h3>
+            <ol>
+              <li>Use palavras simples na busca.</li>
+              <li>Escolha sites confiáveis nos resultados.</li>
+            </ol>
+            <p class="help-note">Prefira sites seguros e oficiais.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/internet-search.jpg" alt="Screenshot de como pesquisar na internet" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="internet-close">
+          <div class="content-block">
+            <h3>FECHAR COM SEGURANÇA</h3>
+            <ol>
+              <li>Toque no X ou em fechar aba.</li>
+              <li>Volte para a tela inicial ao terminar.</li>
+            </ol>
+            <p class="help-note">Fechar abas ajuda a manter o celular organizado.</p>
+          </div>
+          <div class="mobile-screenshot">
+            <img src="assets/images/internet-close.jpg" alt="Screenshot de como fechar navegador" loading="lazy" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
